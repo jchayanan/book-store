@@ -1,0 +1,21 @@
+{% extends 'base_layout.html' %}
+{% block content %}
+
+<label><h1 class="display-3 pb-3" style="padding-top:136px">Upload image</h1></label>
+<div class="row" style="padding-bottom: 243px;">
+    <div class="col-4 px-1">
+    <form method="post" enctype="multipart/form-data">
+        
+        <input class="form-control" id="input-file-now" type="file" name="file1" accept="image/*">
+    </div>
+    <div class="col px-0">
+            <input onclick="myfunc()" class="btn btn-primary" type="submit">
+        </div>
+    </form>
+</div>
+
+{% endblock content %}
+
+
+
+

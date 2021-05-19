@@ -1,0 +1,17 @@
+{% extends 'base_layout.html' %}
+{% block content %}
+
+    <div class="card text-center" style="background: radial-gradient(circle, rgba(255, 255, 255, 0.349) 0%, rgba(253, 253, 255, 0.425) 100%);padding-bottom: 59px; margin-top:150px">
+        <div class="card-body">
+            <h1 class="card-title display-1">Prediction</h1>
+
+            <h2 class="card-text">{{ pred_result['predictions'][0]['label'] }}</h2>
+            <h1 id="confidence">{{ pred_result['predictions'][0]['confidence'] }}</h1>
+            <button class="btn btn-primary mt-5" onclick="myfunc()">Percentage</button>
+        </div>
+    </div>
+
+
+{% endblock content %}
+
+

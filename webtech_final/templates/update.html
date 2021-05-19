@@ -1,0 +1,41 @@
+{% extends "base_layout.html" %}
+{% block content %}
+
+<form method="POST">
+
+  <div class="form-group m-5 p-5">
+      <div class="display-5" style="font-size: 20px;">
+    <label class="control-label col-sm-2" for="id">Book ID</label><br>
+    <div class="col-sm-10">
+      <input type="text" class="form-control " name="id" placeholder="Book ID that you want to update" /><br>
+    </div>
+
+    <label class="control-label col-sm-2" for="title">Title</label><br>
+    <div class="col-sm-10">
+      <input type="text" class="form-control " name="title" placeholder="Update new title" /><br>
+    </div>
+ 
+    <label class="control-label col-sm-2" for="author">Author</label><br>
+    <div class="col-sm-10">
+      <input type="text" class="form-control " name="author" placeholder="Update new author" /><br>
+    </div>
+
+    <label class="control-label col-sm-2" for="categories">Category</label><br>
+    <div class="col-sm-10">
+      <input type="text" class="form-control " name="categories" placeholder="Update new category" /><br>
+    </div>
+
+    <label class="control-label col-sm-2" for="year">Year</label><br>
+    <div class="col-sm-10">
+      <input type="text" class="form-control " name="year" placeholder="Update new year" /><br>
+    </div>
+
+    <label class="control-label col-sm-2" for="pages">Page</label><br>
+    <div class="col-sm-10">
+      <input type="text" class="form-control " name="pages" placeholder="Update new year" /><br>
+    </div>
+
+    <button type="submit" class="btn btn-primary" value="submit">Submit</button>
+</div>
+    </div>
+  {% endblock %}

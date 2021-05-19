@@ -1,0 +1,42 @@
+{% extends 'base_layout.html' %}
+
+{% block head %}
+<div class="p-5 bg-image"
+    style="background-image: url('../static/image/Banner.jpg');height: 400px;background-size: cover;height: 300px;">
+    <div class="mask">
+        <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="p-5 text-center">
+                <h1 class="mb-3">Machine Learing</h1>
+                <h4 class="mb-3">Book Cover Prediction</h4>
+                <a class="btn btn-outline-dark" href="/bookpred" role="button">Go to ML</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="row row-eq-height text-justify">
+    {% for data in data %}
+    <div class="col-3 mx-4 my-2 py-3">
+        <div class="text-center m-1" style="width: 100%;"> 
+                <a href={{data.url}}><img class="img-thumbnail text-center card-img-top"
+                        src="\static\image\46.jpg" width="240" height="360"></a>
+                <strong>
+                    <p class="card-title pt-3" id="limit-len">{{data.title}}</p>
+                </strong>
+        </div>
+        <div class="text-left">
+            <p><strong>Author :</strong> {{data.author}}</p>
+            <p id="limit-len"><strong>Categories : </strong>{{data.categories}}</p>
+            <p><strong>Year : </strong>{{data.year}}</p>
+            <p><b>Pages : </b>{{data.pages}}</p>
+        </div>
+        <div class="bottomright">
+            <p>{{data.id}}</p>
+        </div>
+
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
